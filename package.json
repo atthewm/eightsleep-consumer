@@ -1,0 +1,23 @@
+{
+  "name": "eightsleep-consumer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Smoke-test consumer for eightsleep-client. Pulls recent trends and prints a summary.",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node --env-file=.env dist/main.js",
+    "dev": "tsc && node --env-file=.env dist/main.js"
+  },
+  "dependencies": {
+    "eightsleep-client": "file:../eightsleep-client"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}
