@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Smoke-test consumer for eightsleep-client. Pulls recent trends and prints a summary.",
+  "description": "Consumer for eightsleep-client. Prints recent sleep and bridges Eight Sleep into Apple Home through Home Assistant.",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
+    "test": "tsc && node --test dist/ha/ha.test.js",
     "start": "node --env-file=.env dist/main.js",
-    "dev": "tsc && node --env-file=.env dist/main.js"
+    "dev": "tsc && node --env-file=.env dist/main.js",
+    "ha:check": "tsc && node --env-file=.env dist/main.js ha:check",
+    "ha:discover": "tsc && node --env-file=.env dist/main.js ha:discover",
+    "ha:generate": "tsc && node --env-file=.env dist/main.js ha:generate",
+    "ha:publish": "tsc && node --env-file=.env dist/main.js ha:publish",
+    "ha:watch": "tsc && node --env-file=.env dist/main.js ha:publish --watch"
   },
   "dependencies": {
     "eightsleep-client": "file:../eightsleep-client"
