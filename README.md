@@ -51,8 +51,8 @@ day         score  sleep    presence
 | `EIGHT_SLEEP_PASSWORD` | — | Account password |
 | `EIGHT_SLEEP_TZ` | `America/Chicago` | IANA timezone |
 | `EIGHT_SLEEP_DAYS` | `7` | Lookback window (days) |
-| `HA_URL` | — | Home Assistant URL, for the `ha:*` commands |
-| `HA_TOKEN` | — | Home Assistant long-lived access token |
+| `HA_URL` | none | Home Assistant URL, for the `ha:*` commands |
+| `HA_TOKEN` | none | Home Assistant long-lived access token |
 
 The `ha:check`, `ha:discover` and `ha:generate` commands only need `HA_URL` and `HA_TOKEN`. More options are in [docs/homekit.md](docs/homekit.md).
 
