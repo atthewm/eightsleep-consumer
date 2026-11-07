@@ -1,10 +1,16 @@
 # eightsleep-consumer
 
-Minimal Node CLI that exercises [`eightsleep-client`](../eightsleep-client). Authenticates, then prints a table of recent sleep days.
+Minimal Node CLI that exercises [`eightsleep-client`](https://github.com/atthewm/eightsleep-client). Authenticates, then prints a table of recent sleep days.
 
 ## Setup
 
+Clone both repos side by side, build the client, then install here:
+
 ```bash
+git clone https://github.com/atthewm/eightsleep-client
+git clone https://github.com/atthewm/eightsleep-consumer
+(cd eightsleep-client && npm install && npm run build)
+cd eightsleep-consumer
 npm install
 cp .env.example .env
 # fill in EIGHT_SLEEP_EMAIL / EIGHT_SLEEP_PASSWORD
@@ -32,8 +38,8 @@ day         score  sleep    presence
 
 | Var | Default | Description |
 |--|--|--|
-| `EIGHT_SLEEP_EMAIL` | — | Account email |
-| `EIGHT_SLEEP_PASSWORD` | — | Account password |
+| `EIGHT_SLEEP_EMAIL` | none | Account email |
+| `EIGHT_SLEEP_PASSWORD` | none | Account password |
 | `EIGHT_SLEEP_TZ` | `America/Chicago` | IANA timezone |
 | `EIGHT_SLEEP_DAYS` | `7` | Lookback window (days) |
 
